@@ -75,8 +75,8 @@
     import {ambilDaftarjadwal} from './main.js';
 
     $(document).ready(async function() {
-      let elemenDaftar = $("#daftarjadwal > tbody");
-      let daftarjadwal= awaitjadwal ();
+      let elemenDaftar = $("#Daftarjadwal > tbody");
+      let daftarjadwal =await ambilDaftarjadwal ();
       let nomor = 1;
 
 
@@ -110,7 +110,7 @@
       })
 
       $('.link-ubah').click(async function() {
-        window.location.replace('ubahjadwal.html?docId=' + $(this).attr('data'));
+        window.location.replace('ubah-jadwal.html?docId=' + $(this).attr('data'));
       })
 
       $('#loader').hide();
