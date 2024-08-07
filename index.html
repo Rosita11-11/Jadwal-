@@ -36,7 +36,7 @@
   </table>
 
   <div class="d-flex justify-content-center">
-    <img src="loader.gif" style="width: 15em; display: block" id="loader">
+ 
   </div>
 
   <div class="d-flex justify-content-center">
@@ -72,11 +72,11 @@
   </style>
 
   <script type="module">
-    import { hapusjadwal } from './main.js';
+    import {ambilDaftarjadwal} from './main.js';
 
     $(document).ready(async function() {
-      let elemenDaftar = $("#daftar-jadwal > tbody");
-      let daftarjadwal= await jadwal ();
+      let elemenDaftar = $("#daftarjadwal > tbody");
+      let daftarjadwal= awaitjadwal ();
       let nomor = 1;
 
 
@@ -90,7 +90,7 @@
           '<td>' + data.jamke + '</td>' +
           '<td>' + data.krlas + '</td>' +
           '<td>' + data.mapel + '</td>' +
-          '<td>' + data.waktu + '</td>' + '
+          '<td>' + data.waktu + '</td>' + 
           
           '<td class="stack-up">' +
           ' <a href="#" class="btn btn-warning link-ubah"  data="' +
@@ -110,7 +110,7 @@
       })
 
       $('.link-ubah').click(async function() {
-        window.location.replace('ubah-jadwal.html?docId=' + $(this).attr('data'));
+        window.location.replace('ubahjadwal.html?docId=' + $(this).attr('data'));
       })
 
       $('#loader').hide();
