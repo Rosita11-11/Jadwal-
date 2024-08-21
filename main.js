@@ -25,7 +25,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-export async function ambilDaftarjadwal() {
+export async function ambildaftarjadwal() {
   const refDokumen = collection(db, "jadwal");
   const kueri = query(refDokumen, orderBy("nama"));
   const cuplikanKueri = await getDocs(kueri);

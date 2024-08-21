@@ -72,17 +72,17 @@
   </style>
 
   <script type="module">
-    import {ambilDaftarjadwal} from './main.js';
+    import {ambildaftarjadwal} from './main.js';
 
     $(document).ready(async function() {
-      let elemenDaftar = $("#Daftar-jadwal > tbody");
-      let daftarjadwal =await ambilDaftarjadwal ();
+      let elemendaftar = $("#daftar-jadwal > tbody");
+      let daftarjadwal =await ambildaftarjadwal ();
       let nomor = 1;
 
 
 
       daftarjadwal.forEach((data) => {
-        elemenDaftar.append(
+        elemendaftar.append(
           '<tr>' +
           '<td>' + data.nomer+ '</td>'+
           '<td>' + data.guru+ '</td>' +
