@@ -68,14 +68,14 @@ export async function tambahJadwal ( guru, hari, jamke, jelas, waktu, ) {
   }
 }
 
-export async function ubahJadwal(docId) {
+export async function hapusdaftarJadwal(docId) {
   
   await deleteDoc(doc(db, "Jadwal", 
   docId));
 }
 
 
-export async function hapusdaftarJadwal( guru, hari, jamke, keals, waktu,) {
+export async function ubahJadwal( guru, hari, jamke, keals, waktu,) {
     await updateDoc(doc(db, 'Jadwal',
     docld), {
     
