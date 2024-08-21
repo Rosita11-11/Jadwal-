@@ -25,8 +25,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-export async function ambildaftarjadwal() {
-  const refDokumen = collection(db, "jadwal");
+export async function ambildaftarJadwal() {
+  const refDokumen = collection(db, "Jadwal");
   const kueri = query(refDokumen, orderBy("nama"));
   const cuplikanKueri = await getDocs(kueri);
 
@@ -50,9 +50,9 @@ export function formatAngka(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-export async function tambahjadwal ( guru, hari, jamke, jelas, waktu, ) {
+export async function tambahJadwal ( guru, hari, jamke, jelas, waktu, ) {
   try {
-    const dokRef = await addDoc(collection(db, 'jadwal'), {
+    const dokRef = await addDoc(collection(db, 'Jadwal'), {
       
  
       guru: guru,
@@ -68,15 +68,15 @@ export async function tambahjadwal ( guru, hari, jamke, jelas, waktu, ) {
   }
 }
 
-export async function ubahjadwal(docId) {
+export async function ubahJadwal(docId) {
   
-  await deleteDoc(doc(db, "jadwal", 
+  await deleteDoc(doc(db, "Jadwal", 
   docId));
 }
 
 
-export async function hapusdaftarjadwal( guru, hari, jamke, keals, waktu,) {
-    await updateDoc(doc(db, 'jadwal',
+export async function hapusdaftarJadwal( guru, hari, jamke, keals, waktu,) {
+    await updateDoc(doc(db, 'Jadwal',
     docld), {
     
       guru: guru,
@@ -88,8 +88,8 @@ export async function hapusdaftarjadwal( guru, hari, jamke, keals, waktu,) {
     })
 }
 
-export async function ambiljadwal(doc) {
-  const docRef = await doc(db, "jadwal", docId);
+export async function ambilJadwal(doc) {
+  const docRef = await doc(db, "Jadwal", docId);
   const docSnap = await getDoc(docRef);
 
   return await docSnap.data();
