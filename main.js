@@ -50,7 +50,7 @@ export function formatAngka(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-export async function tambahjadwal( guru, hari, jamke, jelas, waktu, ) {
+export async function tambahjadwal ( guru, hari, jamke, jelas, waktu, ) {
   try {
     const dokRef = await addDoc(collection(db, 'jadwal'), {
       
@@ -68,7 +68,7 @@ export async function tambahjadwal( guru, hari, jamke, jelas, waktu, ) {
   }
 }
 
-export async function hapusjadwal(docId) {
+export async function ubahjadwal(docId) {
   
   await deleteDoc(doc(db, "jadwal", 
   docId));
