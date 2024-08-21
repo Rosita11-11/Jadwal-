@@ -39,7 +39,7 @@ export async function ambildaftarJadwal() {
       jamke: dok.data().jamke,
       kelas: dok.data().kelas,
       mapel: dok.data().mapel,
-     waktu: dok.data().waktu,
+     waktu: dok.data().waktu
     });
   });
 
