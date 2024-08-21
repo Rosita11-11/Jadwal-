@@ -75,7 +75,7 @@ export async function ubahjadwal(docId) {
 }
 
 
-export async function ubahjadwal( guru, hari, jamke, keals, waktu,) {
+export async function hapusdaftarjadwal( guru, hari, jamke, keals, waktu,) {
     await updateDoc(doc(db, 'jadwal',
     docld), {
     

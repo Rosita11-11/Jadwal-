@@ -75,7 +75,7 @@
     import {ambilDaftarjadwal} from './main.js';
 
     $(document).ready(async function() {
-      let elemenDaftar = $("#Daftarjadwal > tbody");
+      let elemenDaftar = $("#Daftar-jadwal > tbody");
       let daftarjadwal =await ambilDaftarjadwal ();
       let nomor = 1;
 
@@ -84,7 +84,7 @@
       daftarjadwal.forEach((data) => {
         elemenDaftar.append(
           '<tr>' +
-          '<td>' + data.nomber+ '</td>'+
+          '<td>' + data.nomer+ '</td>'+
           '<td>' + data.guru+ '</td>' +
           '<td>' + data.hari + '</td>' +
           '<td>' + data.jamke + '</td>' +
